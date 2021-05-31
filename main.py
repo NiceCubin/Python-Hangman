@@ -2,10 +2,10 @@
 
 import random as rd
 
-WORDS = ["Pig"]
+WORDS = ["Pig", "Cow", "Horse"]
 GUESSES = 6
 word = rd.choice(words)
-hiddenword = ["_" for x in word]
+hiddenword = ["_"] * len(word)
 tried = []
   
 while "_" in hiddenword and guesses > 0:
