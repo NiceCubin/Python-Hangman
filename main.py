@@ -1,5 +1,4 @@
 # Hangman
-# Seventh Script
 
 import random as rd
 
