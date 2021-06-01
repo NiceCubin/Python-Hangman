@@ -3,7 +3,7 @@
 import random as rd
 
 WORDS = ["Pig", "Cow", "Horse"]
-GUESSES = 6
+guesses = 6
 word = rd.choice(WORDS)
 hiddenword = ["_"] * len(word)
 tried = []
@@ -39,12 +39,12 @@ while "_" in hiddenword and guesses > 0:
     if not "_" in hiddenword: print(*hiddenword)
 
   else:
-    GUESSES -= 1
+    guesses -= 1
     print("No! That's Incorrect\n")
-    if GUESSES == 1: print("You Have 1 Wrong Guess Left!")
-    else: print(f"You Have {GUESSES} Wrong Guesses Left.")
+    if guesses == 1: print("You Have 1 Wrong Guess Left!")
+    else: print(f"You Have {guesses} Wrong Guesses Left.")
 
   tried.append(guess)
 
-if GUESSES > 0: print("You Won!")
+if guesses > 0: print("You Won!")
 else: print("You Lost..")
